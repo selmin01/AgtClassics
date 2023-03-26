@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> -->
     </head>
     <body>
         <div class="div_p">
@@ -16,7 +19,7 @@
             <nav class="navClassic">
                 <center>
                 <hr>
-                <a class="waves-effect waves-light btn" id="submit">Insertion Sort</a>
+                <a class="waves-effect waves-light btn" >Insertion Sort</a>
                 <hr>
                 <a class="waves-effect waves-light btn">Bubble Sort</a>
                 <hr>
@@ -25,17 +28,20 @@
                 <a class="waves-effect waves-light btn">Merge Sort</a>
                 <hr>
                 <a class="waves-effect waves-light btn">Heap Sort</a>
+                
                 </center>
             </nav>
-
+            <div class="btn_start">
+                <a class="waves-effect waves-light btn pink" id="submit">Start</a> 
+            </div>
             <div class="box"> 
                 <div class="col s12 m6">
                     <div class="card blue-grey darken-4">
                         <div class="card-content white-text">
-                        <span class="card-title">Card Title</span>
-                        <label for="first_name">Digite os valores separados por vírgula:</label>
+                            <span class="card-title">Card Title</span>
+                            <label for="first_name">Digite os valores separados por vírgula:</label>
                             <input class="validate white-text" id="input" type="text">
-                            
+                               
                         </div>
                         <div class="card-action">
                             <input class="white-text" type="text" id="output">
@@ -44,11 +50,69 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="div_ppp">
-
+            
         </div>   
+
+        <div class="div_table">
+            <header>
+                <span class="card-title"><h3 class="title">Classes de complexidade</h3></span>
+            </header>
+            
+                <table class="centered">
+                    <thead>
+                        <tr>
+                            <th>f(n)</th>
+                            <th>Classe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Constante</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>log(n)</td>
+                            <td>Logarítmica</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td>Linear</td>
+                        </tr>
+                        <tr>
+                            <td>n log(n)</td>
+                            <td>Log-linear</td>
+                        </tr>
+                        <tr>
+                            <td>n^2</td>
+                            <td>Quadrática</td>
+                        </tr>
+                        <tr>
+                            <td>n^3</td>
+                            <td>Cúbica</td>
+                        </tr>
+                        <tr>
+                            <td>n^3</td>
+                            <td>Cúbica</td>
+                        </tr>
+                        <tr>
+                            <td>n^k</td>
+                            <td>Polinomial</td>
+                        </tr>
+                        <tr>
+                            <td>2^n</td>
+                            <td>Exponencial</td>
+                        </tr>
+                        <tr>
+                            <td>n!</td>
+                            <td>Fatorial</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <!-- </article> -->
+        </div>
 
     </body>
 </html>
