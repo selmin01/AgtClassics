@@ -5,6 +5,14 @@
     height: 15%;
     background-color: blue;
 }
+
+.title{
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: aquamarine; /* cor da borda */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif; 
+}
+
 .div_pp{
     /* display: inline-flex; */
     width: 100%;
@@ -15,6 +23,7 @@
     position: absolute;
     display: inline-block;
     padding: 25%;
+    margin-top: 10%;
     left: 35%;
 }
 /* .divinblock{

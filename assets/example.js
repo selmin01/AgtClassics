@@ -2,7 +2,7 @@
 var input=document.getElementById("input");
 var output=document.getElementById("output");
 var submit=document.getElementById("submit");
-var valueInput;
+var valueInput=[];
 var sortedArray=[];
 var result='';
 
@@ -21,14 +21,21 @@ submit.onclick=function(){
 function grabInput(){
     valueInput=document.getElementById("input").value;
     valueInput=valueInput.split(",");
-    // sortedArray = insSort(valueInput);
-    // sortedArray = bubleShort(valueInput);
-    sortedArray = quickSort(valueInput);
+
+    for (let item = 0; item < valueInput.length; item++) {
+        number = parseInt(valueInput[item]);
+        valueInput[item] = number;
+    }
+    // console.log(valueInput);
+    
+    // sortedArray = insertionSort(valueInput);
+    sortedArray = bubleSort(valueInput);
+    // sortedArray = quickSort(valueInput);
     concatenate();
     //giveInput();
 }
 
-function insSort(arr){
+function insertionSort(arr){
     let position,value;
 
     for (let i=0;i<arr.length;i++){
@@ -44,13 +51,15 @@ function insSort(arr){
   return arr;
 }
 
-function bubleShort(arr){
-    for(let i=0; i<arr.length; i++){
-        for(let j=i+1; j<arr.length; j++){
-            if(arr[i] > arr[j]){
-                let temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp
+function bubleSort(arr){
+    var n = arr.length;
+
+    for(let i=n-1; i>0; i--){
+        for(let j=0; j<i; j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
         }
     }

@@ -1,0 +1,21 @@
+
+.body{
+    background-color: #BFBFBF;
+}
+
+.box{
+    padding-top: 180px;
+}
+
+.borderBox{
+    border-radius: 20%;
+    background-color: blueviolet;
+}
+
+.title{
+    margin-top: 100px;
+    -webkit-text-stroke-width: 1.5px; /* largura da borda */
+    -webkit-text-stroke-color: blueviolet; /* cor da borda */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif; 
+}
