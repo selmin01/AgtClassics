@@ -42,13 +42,13 @@ function insertionSort(arr){
     let position,value;
 
     for (let i=0;i<arr.length;i++){
-        value=arr[i]; // pegando elementos[i] para comparar
+        value=arr[i]; 
         position=i;   
-        while(position>0 && arr[position-1]>value){ // comparando
-            arr[position]=arr[position-1]; // troca
-            position=position-1;           // verifica se há elementos antes dele
+        while(position>0 && arr[position-1]>value){ 
+            arr[position]=arr[position-1]; 
+            position=position-1;           
         }
-        arr[position]=value; // substitui valor
+        arr[position]=value; 
     }
     
     console.log('insertionSort');
@@ -152,7 +152,6 @@ function heapify(arr, n, i) {
       heapify(arr, n, largest);
     }
 }
-
 
 function concatenate(){
     for(i=0;i<sortedArray.length;i++){
