@@ -87,27 +87,6 @@ function quickSort(arr) {
     return [...quickSort(left), pivot, ...quickSort(right)];
   }
 
-
-// function giveInput(){
-//     for(i=0;i<valueInput.length;i++){
-//         console.log(i);
-//         sortedArray.push(valueInput[i]);
-//         sortFunction(i);
-//     }
-//     concatenate();
-// }
-
-// function sortFunction(i){
-//     if(i!=0){
-//         while(i!=0 && sortedArray[i-1]>sortedArray[i]){
-//             var dummy=sortedArray[i-1];
-//             sortedArray[i-1]=sortedArray[i];
-//             sortedArray[i]=dummy;
-//             i--;
-//         }
-//     }
-// }
-
 function concatenate(){
     for(i=0;i<sortedArray.length;i++){
         result=result+sortedArray[i]+',';

@@ -2,27 +2,55 @@
     <head>
         <meta charset="utf-8">
         <title>Clássicos de Algoritmos</title>
-        <link rel="stylesheet" href="assets/">
-
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="body">
 
-        <div>
-            https://www.blogcyberini.com/2018/02/bubble-sort.html
-            <p>
-                O algoritmo de classificação de bolhas é um algoritmo de classificação confiável. Este 
-                algoritmo tem uma complexidade de tempo de pior caso de O(n2). O tipo de bolha tem uma 
-                complexidade espacial de O(1). O número de trocas no tipo de bolha é igual ao número de pares 
-                de inversão no array fornecido. Quando os elementos da matriz são poucos e a matriz está quase
-                classificada, a classificação por bolhas é eficaz e eficiente.
-            </p>
-            <li>A complexidade de tempo do pior caso da ordenação por inserção é O(N^2)</li>
-            <li>A complexidade média do tempo de caso da classificação por inserção é O(N^2)</li>
-            <li>A complexidade de tempo do melhor caso é O(N).</li>
-            <li>A complexidade do espaço é O(1)</li>
+        <div class="position-relative borderBox">
+            <div class="position-absolute top-0 start-50 translate-middle-x">
+                <header>
+                    <h1 class="title">Bubble Sort</h1>
+                </header>
+            </div>
         </div>
+        
+        <div class="container box">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <p>
+                    Bubble Sort é um algoritmo de ordenação que pode ser aplicado em Arrays e Listas dinâmicas. 
+                    Se o objetivo é ordenar os valores em forma decrescente, então, a posição atual é comparada 
+                    com a próxima posição e, se a posição atual for maior que a posição posterior, é realizada a
+                    troca dos valores nessa posição. Caso contrário, não é realizada a troca, apenas passa-se 
+                    para o próximo par de comparações.
+                    A ideia básica do algoritmo é realizar a troca de elementos em posições adjacentes (um ao lado
+                    do outro), de modo que os elementos com maior valor sejam posicionados no final do vetor 
+                    (array) e os com menor valor sejam posicionados no início do vetor.
+                    <li>A complexidade de tempo no pior caso do Bubble Sort é O(N^2)</li>
+                    <li>A complexidade de tempo no melhor caso é O(N).</li>
+                    <li>A complexidade do espaço é O(1)</li>
+                    <br>
+                    O melhor caso do Bubble Sort ocorre quando o vetor está ordenado, pois o laço 
+                    será executado uma única vez, quando i = 1. Dessa forma, a comparação será 
+                    realizada n - 1 vezes. Portanto, a complexidade do Bubble Sort no melhor caso é O(n).
+                    O pior caso ocorre quando o vetor está ordenado em ordem decrescente, pois a comparação
+                    sempre será verdadeira, portanto o algoritmo irá realizar a troca em todas as iterações.
+                    A quantidade de iterações do laço é igual a n-1.
+                </p>
+            </div>
+        </div>
+
+        <div class="position-relative borderBox">
+            <div class="position-absolute top-0 start-50 translate-middle-x">
+                <div class="btn_start">
+                    <a class="waves-effect waves-light btn pink" href="../index.html">Voltar</a> 
+                </div>
+            </div>
+        </div>
+
+        
+       
         
     </body>
 </html>
