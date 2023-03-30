@@ -47,7 +47,7 @@
                         </div>
                         <div class="card-action">
                             <input class="white-text" type="text" id="output">
-                            <script src="assets/example.js"></script>
+                            <script src="assets/main.js"></script>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,10 @@
 
         <div class="div_table">
             <header>
-                <span class="card-title"><h3 class="title">Classes de complexidade</h3></span>
+                <span class="card-title">
+                <center> 
+                    <h3>Classes de complexidade</h3></span>
+                </center>
             </header>
             
             <table class="centered">
@@ -115,7 +118,28 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+            <br>
 
+            <div class="card">
+                <div class="card-image">
+                <img src="assets/imgs/BigOGraph.png">
+                <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                <p> Principais ordens de complexidade algorítmica de onde podemos discernir claramente a taxa 
+                    de crescimento de cada uma.</p>
+                </div>
+            </div>
+            <br>
+            <p>
+                Para análise experimental não podemos só depender da complexidade O(n) de um algoritmo 
+                para determinar se é o melhor a usar ou não. Apesar do Quicksort apresentar uma complexidade 
+                O(nlog(n)), inferior à O(n2) do Insertion, vimos que claramente há situações específicas em que
+                o Insertion seria uma melhor aposta. É por estas mesmas razões que para mais análise com relação
+                ao tempo de execução desses algoritmos devemos olhar atentamente para entrada em que trabalhos 
+                várias optimizações de algoritmos consistem em utilizar um ou outro algoritmo auxiliar quando 
+                detectamos que o input é de um determinado tipo mais favorável a esse mesmo auxiliar. 
+            </p>
+        </div>
     </body>
 </html>

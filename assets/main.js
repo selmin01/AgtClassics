@@ -27,12 +27,15 @@ function grabInput(){
         valueInput[item] = number;
     }
     // console.log(valueInput);
-    
+    console.time('runtime');
     // sortedArray = insertionSort(valueInput);
-    sortedArray = bubleSort(valueInput);
+    // sortedArray = bubleSort(valueInput);
     // sortedArray = quickSort(valueInput);
+    // sortedArray = mergeSort(valueInput);
+    sortedArray = heapSort(valueInput);
+    console.timeEnd('runtime');
+    
     concatenate();
-    //giveInput();
 }
 
 function insertionSort(arr){
@@ -48,6 +51,7 @@ function insertionSort(arr){
         arr[position]=value; // substitui valor
     }
     
+    console.log('insertionSort');
   return arr;
 }
 
@@ -64,6 +68,7 @@ function bubleSort(arr){
         }
     }
 
+    console.log('bubleSort');
     return arr;
 }
 
@@ -84,8 +89,70 @@ function quickSort(arr) {
       }
     }
   
+    console.log('quickSort');
     return [...quickSort(left), pivot, ...quickSort(right)];
-  }
+}
+
+function mergeSort(arr) {
+    if (arr.length <= 1) {
+      return arr;
+    }
+  
+    const mid = Math.floor(arr.length / 2);
+    const left = arr.slice(0, mid);
+    const right = arr.slice(mid);
+  
+    console.log('mergeSort');
+    return merge(mergeSort(left), mergeSort(right));
+}
+  
+function merge(left, right) {
+    const result = [];
+  
+    while (left.length && right.length) {
+      if (left[0] <= right[0]) {
+        result.push(left.shift());
+      } else {
+        result.push(right.shift());
+      }
+    }
+  
+    return [...result, ...left, ...right];
+}
+
+function heapSort(arr) {
+    for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
+      heapify(arr, arr.length, i);
+    }
+    for (let i = arr.length - 1; i > 0; i--) {
+      [arr[0], arr[i]] = [arr[i], arr[0]];
+      heapify(arr, i, 0);
+    }
+
+    console.log('heapSort');
+    return arr;
+}
+
+function heapify(arr, n, i) {
+    let largest = i; // Initialize largest as root
+    let left = 2 * i + 1; // left = 2*i + 1
+    let right = 2 * i + 2; // right = 2*i + 2
+
+    if (left < n && arr[left] > arr[largest]) {
+      largest = left;
+    }
+
+    if (right < n && arr[right] > arr[largest]) {
+      largest = right;
+    }
+
+    if (largest !== i) {
+      [arr[i], arr[largest]] = [arr[largest], arr[i]];
+
+      heapify(arr, n, largest);
+    }
+}
+
 
 function concatenate(){
     for(i=0;i<sortedArray.length;i++){
